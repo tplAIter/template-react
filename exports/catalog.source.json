@@ -1,0 +1,75 @@
+{
+  "apiVersion": "tplaiter.dev/source-local-export-index/v1",
+  "exports": [
+    {
+      "id": "react.router",
+      "domain": "block",
+      "name": "router",
+      "version": "1.0.0-preview.1",
+      "contentDigest": "sha256:2386d91191004b8208e9253529b5186d046539751ebda7b4bb093f3a6b23ab26",
+      "requires": [],
+      "parameters": [],
+      "toolDigest": "sha256:8bf91deed45b7f758a0d2a7cad0a97ea52f8b9b895326093eaa5c68e8efe3a0a"
+    },
+    {
+      "id": "react.ui",
+      "domain": "block",
+      "name": "ui",
+      "version": "1.0.0-preview.1",
+      "contentDigest": "sha256:2340f3675e23e2d74f5961e8030df9b695fa5073dd6b4b48bc99933182ad4038",
+      "requires": [],
+      "parameters": [],
+      "toolDigest": "sha256:8bf91deed45b7f758a0d2a7cad0a97ea52f8b9b895326093eaa5c68e8efe3a0a"
+    },
+    {
+      "id": "react.skills",
+      "domain": "skill",
+      "name": "skills",
+      "version": "1.0.0-preview.1",
+      "contentDigest": "sha256:e715b98f06c4ac7a62c0d9201445b54c2f544d2c250e9ed5fbac14210f89d774",
+      "requires": [],
+      "parameters": [],
+      "toolDigest": "sha256:8bf91deed45b7f758a0d2a7cad0a97ea52f8b9b895326093eaa5c68e8efe3a0a"
+    },
+    {
+      "id": "react.data",
+      "domain": "package",
+      "name": "data",
+      "version": "1.0.0-preview.1",
+      "contentDigest": "sha256:64acc8a4194d4ad2ab37821971bda86af5c616ecbdc357f10c4bcdc457ccd8c4",
+      "requires": [],
+      "parameters": [],
+      "toolDigest": "sha256:8bf91deed45b7f758a0d2a7cad0a97ea52f8b9b895326093eaa5c68e8efe3a0a"
+    },
+    {
+      "id": "react.generator-routing",
+      "domain": "package",
+      "name": "generator-routing",
+      "version": "1.0.0-preview.1",
+      "contentDigest": "sha256:b69bcf26bd64bfba3d2622be4d18b46496e7491a77618abcff9624414a52ffdc",
+      "requires": [],
+      "parameters": [],
+      "toolDigest": "sha256:8bf91deed45b7f758a0d2a7cad0a97ea52f8b9b895326093eaa5c68e8efe3a0a"
+    },
+    {
+      "id": "react.packages",
+      "domain": "package",
+      "name": "packages",
+      "version": "1.0.0-preview.1",
+      "contentDigest": "sha256:64772cd69ca820fd30f58b0f45ef9e8d79b31eab91edbd01ff1e7c66c3d13c8f",
+      "requires": [],
+      "parameters": [],
+      "toolDigest": "sha256:8bf91deed45b7f758a0d2a7cad0a97ea52f8b9b895326093eaa5c68e8efe3a0a"
+    },
+    {
+      "id": "react.spa-build",
+      "domain": "package",
+      "name": "spa-build",
+      "version": "1.0.0-preview.1",
+      "contentDigest": "sha256:6e8fe3fa3088180a4b543e8e77cc87907eda1d755fa0aa1cfd1285183da43349",
+      "requires": [],
+      "parameters": [],
+      "toolDigest": "sha256:8bf91deed45b7f758a0d2a7cad0a97ea52f8b9b895326093eaa5c68e8efe3a0a"
+    }
+  ]
+}

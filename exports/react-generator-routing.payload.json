@@ -1,0 +1,86 @@
+{
+  "apiVersion": "tplaiter.dev/export-payload/v1",
+  "exportID": "react.generator-routing",
+  "files": [
+    {
+      "sourcePath": "react-generators/api.ts.tmpl",
+      "targetPath": "react-generators/api.ts.tmpl",
+      "mode": "100644",
+      "contentSHA256": "sha256:bae3db27c2a06825019fd5e0dce5bd777189715a26ee81259eefeb881296ae0f"
+    },
+    {
+      "sourcePath": "react-generators/api_test.ts.tmpl",
+      "targetPath": "react-generators/api_test.ts.tmpl",
+      "mode": "100644",
+      "contentSHA256": "sha256:648ad731225f1b77430ebb4c3a72cb2828465bff4012699dfc974d26915fad02"
+    },
+    {
+      "sourcePath": "react-generators/component.tsx.tmpl",
+      "targetPath": "react-generators/component.tsx.tmpl",
+      "mode": "100644",
+      "contentSHA256": "sha256:9142fb55eb88451d362b1e5e88dc53a5d5fe86e7148ae3a4d2616cd077a6fbf7"
+    },
+    {
+      "sourcePath": "react-generators/component_test.tsx.tmpl",
+      "targetPath": "react-generators/component_test.tsx.tmpl",
+      "mode": "100644",
+      "contentSHA256": "sha256:72e2076361f239a2c53499420277c3cf7561c049302d3b055bbf9bf1d34a021b"
+    },
+    {
+      "sourcePath": "react-generators/feature_api.ts.tmpl",
+      "targetPath": "react-generators/feature_api.ts.tmpl",
+      "mode": "100644",
+      "contentSHA256": "sha256:03dce94ea76a9ee76068b45e36dfc9005c7c7153ab906593e8b5aa7901909616"
+    },
+    {
+      "sourcePath": "react-generators/feature_component.tsx.tmpl",
+      "targetPath": "react-generators/feature_component.tsx.tmpl",
+      "mode": "100644",
+      "contentSHA256": "sha256:545b52020f18e0ed7d2735740b18a8a09d7a9aed9a6ac2f8b7e66e001df9cb57"
+    },
+    {
+      "sourcePath": "react-generators/feature_hook.ts.tmpl",
+      "targetPath": "react-generators/feature_hook.ts.tmpl",
+      "mode": "100644",
+      "contentSHA256": "sha256:33bc40807014f7fdb16b853877e8ad8789c10acdca29ed947c17aab433beb126"
+    },
+    {
+      "sourcePath": "react-generators/feature_model.ts.tmpl",
+      "targetPath": "react-generators/feature_model.ts.tmpl",
+      "mode": "100644",
+      "contentSHA256": "sha256:65a011c7e0dc42039be7054a0dc613566483c31bd5622ee131d8b09ad2fef7d8"
+    },
+    {
+      "sourcePath": "react-generators/feature_test.tsx.tmpl",
+      "targetPath": "react-generators/feature_test.tsx.tmpl",
+      "mode": "100644",
+      "contentSHA256": "sha256:912983c211a98f2690ef33e81d771b1415836cca6bd14ab2c07fae0dcda6ae55"
+    },
+    {
+      "sourcePath": "react-generators/page.tsx.tmpl",
+      "targetPath": "react-generators/page.tsx.tmpl",
+      "mode": "100644",
+      "contentSHA256": "sha256:9dc81c211ef0cbf3a6c8e043b2e41f3c6ea7780a8e2dea62c7b30a8b76866c16"
+    },
+    {
+      "sourcePath": "react-generators/page_test.tsx.tmpl",
+      "targetPath": "react-generators/page_test.tsx.tmpl",
+      "mode": "100644",
+      "contentSHA256": "sha256:98232e83bdbb13735181c1fd35747e71ecf413c0ec27c84b94c7b931aa72a184"
+    },
+    {
+      "sourcePath": "react-generators/route.tsx.tmpl",
+      "targetPath": "react-generators/route.tsx.tmpl",
+      "mode": "100644",
+      "contentSHA256": "sha256:8a9bafe2970428231aded605115c726c847b93bb25be00eb6eca66628b0fd95d"
+    },
+    {
+      "sourcePath": "react-generators/route_wiring.tsx.tmpl",
+      "targetPath": "react-generators/route_wiring.tsx.tmpl",
+      "mode": "100644",
+      "contentSHA256": "sha256:67e84d7af50b59dc2e38390b5cede037ac25915b25b7962f10979eadd078617c"
+    }
+  ],
+  "slots": [],
+  "blocks": []
+}
