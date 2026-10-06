@@ -1,0 +1,32 @@
+{
+  "apiVersion": "tplaiter.dev/export-payload/v1",
+  "exportID": "react.skills",
+  "files": [
+    {
+      "sourcePath": "skills/react-component.md",
+      "targetPath": "skills/react-component.md",
+      "mode": "100644",
+      "contentSHA256": "sha256:71f1e8f241e63e614fe1eec81956547149529ef1128b52457b83bf97441d14eb"
+    },
+    {
+      "sourcePath": "skills/react-data.md",
+      "targetPath": "skills/react-data.md",
+      "mode": "100644",
+      "contentSHA256": "sha256:9d8ccbdf200e1b92a05693d28f5e6d87b02e2ec9529f14b943965b88a1d18b85"
+    },
+    {
+      "sourcePath": "skills/react-routing.md",
+      "targetPath": "skills/react-routing.md",
+      "mode": "100644",
+      "contentSHA256": "sha256:22bc1ab095d3cb8358274ae80ab495c1075b09c6a7628689ab31e09249bf5703"
+    },
+    {
+      "sourcePath": "skills/react-testing.md",
+      "targetPath": "skills/react-testing.md",
+      "mode": "100644",
+      "contentSHA256": "sha256:9f16d6e98003d68499f52d6385a35129a518804269eac3bb2861690f3478c3d4"
+    }
+  ],
+  "slots": [],
+  "blocks": []
+}

@@ -1,0 +1,20 @@
+# {{ .Project.Name }}
+
+TypeScript React Router application. Package identity is fixed as tplaiter-web-app to preserve the exact producer-generated Bun lock across project names.
+
+After a separately approved frozen installation with Bun1.4.2 and the declared runtime, these scripts are available:
+
+```sh
+bun install --frozen-lockfile --ignore-scripts
+bun run dev
+bun run build
+bun run typecheck
+bun run test
+bun run lint
+```
+
+The template does not itself authorize acquisition or native execution. A missing bun.lock is an unfinished source candidate; never regenerate one from an ambient cache or perform an unfrozen fallback install.
+
+VITE_API_BASE_URL is public browser configuration. The default /api/ API must implement GET/POST items, PUT/DELETE items/:id; item fields are exactly id, title and completed. List responses are unique item arrays; create/update return an item; deletion returns204. No server/database or credentials are generated. Transport uses explicit cancellation, bounded JSON, credentials omission and redirect refusal. Development backend CORS must explicitly permit the chosen public application origin.
+
+Home, Items and not-found are real data-router routes. The route generator registers lazy pages; the page generator creates a standalone module only. Generated component/feature/API modules use the shared primitives and decoders. Skill and block catalogs are source artifacts with separately qualified selection; no formatter or installed action is inferred from them.

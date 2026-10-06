@@ -1,0 +1,9 @@
+import { it, expect, vi } from 'vitest';
+import { ApiClient } from './api-client';
+import { load{{ .Name.Pascal }} } from './{{ .Name.Snake }}-api';
+it('loads {{ .Name.Pascal }} using the shared decoder and cancellation boundary', async () => {
+  const transport = vi.fn(async (_input: RequestInfo | URL, _init?: RequestInit) => Response.json([{ id: 'one', name: 'Example' }]));
+  const signal = new AbortController().signal;
+  expect(await load{{ .Name.Pascal }}(new ApiClient('https://example.test/api/', transport), signal)).toEqual([{ id: 'one', name: 'Example' }]);
+  expect(transport.mock.calls[0]?.[1]?.signal).toBe(signal);
+});

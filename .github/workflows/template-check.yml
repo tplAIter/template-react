@@ -1,0 +1,35 @@
+name: React source preparation
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          path: template
+          persist-credentials: false
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          repository: tplAIter/tplaiter
+          ref: 8c22ee752e331ce4f1dd17da74525d3afe2ef939
+          path: core
+          persist-credentials: false
+      - uses: actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff
+        with:
+          go-version: '1.27.1'
+          cache-dependency-path: core/go.sum
+      - name: Populate only reviewed public core Go modules
+        working-directory: core
+        run: go mod download
+      - name: Actual render and five generator preparations
+        env:
+          CORE_DIR: ${{ github.workspace }}/core
+          REACT_RENDER_ROOT: ${{ runner.temp }}/react-render
+        run: ./template/checks/native-generators.sh
+      - name: Closed contracts and no-effect refusal counters
+        env:
+          CORE_DIR: ${{ github.workspace }}/core
+        run: ./template/checks/contracts.sh
+      # No package acquisition, Bun execution or installed authority is claimed.

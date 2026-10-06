@@ -1,0 +1,70 @@
+{
+  "apiVersion": "tplaiter.dev/export-payload/v1",
+  "exportID": "react.spa-build",
+  "files": [
+    {
+      "sourcePath": "react-files/vite.config.ts",
+      "targetPath": "vite.config.ts",
+      "mode": "100644",
+      "contentSHA256": "sha256:0ea84b4e2909b04e4c1cb1b92392a9f85bcb46605472763b15935d3498ba8ed3"
+    },
+    {
+      "sourcePath": "react-files/vitest.config.ts",
+      "targetPath": "vitest.config.ts",
+      "mode": "100644",
+      "contentSHA256": "sha256:b7e221665c58ba15c36fad8df70d4069cffdec3ddb77108d037667bc4d2261b7"
+    },
+    {
+      "sourcePath": "react-files/tsconfig.json",
+      "targetPath": "tsconfig.json",
+      "mode": "100644",
+      "contentSHA256": "sha256:3a11d1d758b82ceae1687b3b3b673d98febb16b81305239be576b6aa30148fed"
+    },
+    {
+      "sourcePath": "react-files/tsconfig.app.json",
+      "targetPath": "tsconfig.app.json",
+      "mode": "100644",
+      "contentSHA256": "sha256:dffe25dccf7b7208f80cac021827a29f4e7ef5f3f5f38fe7d74383cb90e6aeed"
+    },
+    {
+      "sourcePath": "react-files/tsconfig.node.json",
+      "targetPath": "tsconfig.node.json",
+      "mode": "100644",
+      "contentSHA256": "sha256:827382053ea8b7501a9778de4fc96a810edb863fcde2fc7813788789eba79aea"
+    },
+    {
+      "sourcePath": "react-files/eslint.config.js",
+      "targetPath": "eslint.config.js",
+      "mode": "100644",
+      "contentSHA256": "sha256:da4369ec095d921a2cd8202c0a1365bf73541106bc7986be0e2fa0dfd6b942e8"
+    }
+  ],
+  "slots": [
+    {
+      "targetPath": "package.json",
+      "pointer": "/scripts/dev",
+      "value": "vite"
+    },
+    {
+      "targetPath": "package.json",
+      "pointer": "/scripts/build",
+      "value": "tsc -b && vite build"
+    },
+    {
+      "targetPath": "package.json",
+      "pointer": "/scripts/typecheck",
+      "value": "tsc -b"
+    },
+    {
+      "targetPath": "package.json",
+      "pointer": "/scripts/test",
+      "value": "vitest run"
+    },
+    {
+      "targetPath": "package.json",
+      "pointer": "/scripts/lint",
+      "value": "eslint ."
+    }
+  ],
+  "blocks": []
+}

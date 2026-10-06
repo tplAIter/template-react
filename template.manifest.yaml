@@ -1,0 +1,35 @@
+apiVersion: tplater.dev/v1alpha1
+kind: Template
+metadata:
+  name: react-app
+  version: 0.1.0-preview
+  description: TypeScript React Router application with cancellable typed data and accessible forms.
+engine:
+  type: gotemplate
+  root: react-files
+settings: []
+generators:
+  - kind: component
+    targets:
+      - {snippet: react-generators/component.tsx.tmpl, target: 'src/components/{{ .Name.Pascal }}.tsx'}
+      - {snippet: react-generators/component_test.tsx.tmpl, target: 'src/components/{{ .Name.Pascal }}.test.tsx'}
+  - kind: page
+    targets:
+      - {snippet: react-generators/page.tsx.tmpl, target: 'src/pages/{{ .Name.Pascal }}Page.tsx'}
+      - {snippet: react-generators/page_test.tsx.tmpl, target: 'src/pages/{{ .Name.Pascal }}Page.test.tsx'}
+  - kind: route
+    snippet: react-generators/route.tsx.tmpl
+    target: 'src/pages/{{ .Name.Pascal }}Route.tsx'
+    anchors:
+      - {file: src/app/routes.tsx, anchor: 'CODEGEN:ROUTES', insert: react-generators/route_wiring.tsx.tmpl}
+  - kind: feature
+    targets:
+      - {snippet: react-generators/feature_model.ts.tmpl, target: 'src/features/{{ .Name.Snake }}/model.ts'}
+      - {snippet: react-generators/feature_api.ts.tmpl, target: 'src/features/{{ .Name.Snake }}/api.ts'}
+      - {snippet: react-generators/feature_hook.ts.tmpl, target: 'src/features/{{ .Name.Snake }}/use{{ .Name.Pascal }}.ts'}
+      - {snippet: react-generators/feature_component.tsx.tmpl, target: 'src/features/{{ .Name.Snake }}/{{ .Name.Pascal }}Panel.tsx'}
+      - {snippet: react-generators/feature_test.tsx.tmpl, target: 'src/features/{{ .Name.Snake }}/{{ .Name.Pascal }}.test.tsx'}
+  - kind: api
+    targets:
+      - {snippet: react-generators/api.ts.tmpl, target: 'src/data/{{ .Name.Snake }}-api.ts'}
+      - {snippet: react-generators/api_test.ts.tmpl, target: 'src/data/{{ .Name.Snake }}-api.test.ts'}

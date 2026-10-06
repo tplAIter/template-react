@@ -1,0 +1,6 @@
+import { array, record, text } from '../../data/schema';
+export interface {{ .Name.Pascal }} { id: string; label: string }
+export function decode{{ .Name.Pascal }}(value: unknown): {{ .Name.Pascal }} {
+  const v = record(value); return { id: text(v.id, 128), label: text(v.label) };
+}
+export function decode{{ .Name.Pascal }}List(value: unknown): {{ .Name.Pascal }}[] { return array(value, decode{{ .Name.Pascal }}); }

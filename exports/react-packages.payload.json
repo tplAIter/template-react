@@ -1,0 +1,93 @@
+{
+  "apiVersion": "tplaiter.dev/export-payload/v1",
+  "exportID": "react.packages",
+  "files": [],
+  "slots": [
+    {
+      "targetPath": "package.json",
+      "pointer": "/dependencies/react",
+      "value": "19.3.0"
+    },
+    {
+      "targetPath": "package.json",
+      "pointer": "/dependencies/react-dom",
+      "value": "19.3.0"
+    },
+    {
+      "targetPath": "package.json",
+      "pointer": "/dependencies/react-router",
+      "value": "8.4.0"
+    },
+    {
+      "targetPath": "package.json",
+      "pointer": "/devDependencies/@types~1react",
+      "value": "19.3.0"
+    },
+    {
+      "targetPath": "package.json",
+      "pointer": "/devDependencies/@types~1react-dom",
+      "value": "19.3.0"
+    },
+    {
+      "targetPath": "package.json",
+      "pointer": "/devDependencies/@types~1node",
+      "value": "26.6.4"
+    },
+    {
+      "targetPath": "package.json",
+      "pointer": "/devDependencies/typescript",
+      "value": "5.9.3"
+    },
+    {
+      "targetPath": "package.json",
+      "pointer": "/devDependencies/vite",
+      "value": "8.3.2"
+    },
+    {
+      "targetPath": "package.json",
+      "pointer": "/devDependencies/@vitejs~1plugin-react",
+      "value": "6.1.2"
+    },
+    {
+      "targetPath": "package.json",
+      "pointer": "/devDependencies/vitest",
+      "value": "5.0.3"
+    },
+    {
+      "targetPath": "package.json",
+      "pointer": "/devDependencies/jsdom",
+      "value": "30.1.2"
+    },
+    {
+      "targetPath": "package.json",
+      "pointer": "/devDependencies/@testing-library~1react",
+      "value": "16.3.3"
+    },
+    {
+      "targetPath": "package.json",
+      "pointer": "/devDependencies/@testing-library~1dom",
+      "value": "10.4.2"
+    },
+    {
+      "targetPath": "package.json",
+      "pointer": "/devDependencies/eslint",
+      "value": "9.39.4"
+    },
+    {
+      "targetPath": "package.json",
+      "pointer": "/devDependencies/@eslint~1js",
+      "value": "9.39.4"
+    },
+    {
+      "targetPath": "package.json",
+      "pointer": "/devDependencies/typescript-eslint",
+      "value": "8.71.1"
+    },
+    {
+      "targetPath": "package.json",
+      "pointer": "/devDependencies/eslint-plugin-react-hooks",
+      "value": "7.1.1"
+    }
+  ],
+  "blocks": []
+}

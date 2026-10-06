@@ -1,0 +1,13 @@
+import { Loading } from '../../components/Loading';
+import { ErrorPanel } from '../../components/ErrorPanel';
+import { errorMessage } from '../../data/api-error';
+import type { {{ .Name.Pascal }}API } from './api';
+import { use{{ .Name.Pascal }} } from './use{{ .Name.Pascal }}';
+export function {{ .Name.Pascal }}Panel({ api }: { api: {{ .Name.Pascal }}API }) {
+  const { state, reload } = use{{ .Name.Pascal }}(api);
+  return <section aria-label="{{ .Name.Pascal }}"><h2>{{ .Name.Pascal }}</h2>
+    {state.status === 'loading' && <Loading />}
+    {state.status === 'error' && <ErrorPanel message={errorMessage(state.error)} onRetry={reload} />}
+    {state.status === 'ready' && (state.data.length ? <ul>{state.data.map(item => <li key={item.id}>{item.label}</li>)}</ul> : <p>No results.</p>)}
+  </section>;
+}

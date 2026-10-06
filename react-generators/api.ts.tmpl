@@ -1,0 +1,9 @@
+import type { ApiClient } from './api-client';
+import { array, record, text } from './schema';
+export interface {{ .Name.Pascal }}Record { id: string; name: string }
+export function decode{{ .Name.Pascal }}(value: unknown): {{ .Name.Pascal }}Record[] {
+  return array(value, entry => { const v = record(entry); return { id: text(v.id, 128), name: text(v.name) }; });
+}
+export function load{{ .Name.Pascal }}(client: ApiClient, signal: AbortSignal) {
+  return client.request('{{ .Name.Kebab }}', { signal }, decode{{ .Name.Pascal }});
+}

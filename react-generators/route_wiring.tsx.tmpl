@@ -1,0 +1,2 @@
+{{ .Marker }}
+  { path: 'generated/{{ .Name.Kebab }}', lazy: async () => ({ Component: (await import('../pages/{{ .Name.Pascal }}Route')).{{ .Name.Pascal }}Route }) },

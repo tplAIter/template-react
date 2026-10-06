@@ -1,0 +1,7 @@
+import { render, screen } from '@testing-library/react';
+import { it, expect } from 'vitest';
+import { {{ .Name.Pascal }} } from './{{ .Name.Pascal }}';
+it('renders a labelled {{ .Name.Pascal }} region', () => {
+  render(<{{ .Name.Pascal }} title="Example"><p>Content</p></{{ .Name.Pascal }}>);
+  expect(screen.getByRole('region', { name: 'Example' }).textContent).toContain('Content');
+});

@@ -1,0 +1,6 @@
+import type { ApiClient } from '../../data/api-client';
+import { decode{{ .Name.Pascal }}List } from './model';
+export function create{{ .Name.Pascal }}API(client: ApiClient) {
+  return { list: (signal: AbortSignal) => client.request('{{ .Name.Kebab }}', { signal }, decode{{ .Name.Pascal }}List) };
+}
+export type {{ .Name.Pascal }}API = ReturnType<typeof create{{ .Name.Pascal }}API>;

@@ -1,0 +1,9 @@
+import { render, screen } from '@testing-library/react';
+import { it, expect, vi } from 'vitest';
+import { {{ .Name.Pascal }}Panel } from './{{ .Name.Pascal }}Panel';
+import { decode{{ .Name.Pascal }} } from './model';
+it('loads typed {{ .Name.Pascal }} data through the cancellable API', async () => {
+  const api = { list: vi.fn(async (_signal: AbortSignal) => [{ id: 'example', label: 'Example row' }]) };
+  render(<{{ .Name.Pascal }}Panel api={api} />); expect(await screen.findByText('Example row')).toBeTruthy();
+  expect(api.list).toHaveBeenCalledWith(expect.any(AbortSignal)); expect(() => decode{{ .Name.Pascal }}({ id: 'example', label: 4 })).toThrow();
+});

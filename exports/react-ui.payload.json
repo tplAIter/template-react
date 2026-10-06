@@ -1,0 +1,37 @@
+{
+  "apiVersion": "tplaiter.dev/export-payload/v1",
+  "exportID": "react.ui",
+  "files": [
+    {
+      "sourcePath": "react-files/src/components/Button.tsx",
+      "targetPath": "src/components/Button.tsx",
+      "mode": "100644",
+      "contentSHA256": "sha256:8b2305a5546158e48c41248d2cfbfe57953641fc10d8847710864225ec58b90d"
+    },
+    {
+      "sourcePath": "react-files/src/components/Field.tsx",
+      "targetPath": "src/components/Field.tsx",
+      "mode": "100644",
+      "contentSHA256": "sha256:2251d582f5b0ed97038fcf9ce37e513d2240b9d44b9087296646a56bb946d4ee"
+    },
+    {
+      "sourcePath": "react-files/src/components/Loading.tsx",
+      "targetPath": "src/components/Loading.tsx",
+      "mode": "100644",
+      "contentSHA256": "sha256:3d1dcad4b071a17e3bba7af2e5c3158559c92710577ec4e606573bb5067d1358"
+    },
+    {
+      "sourcePath": "react-files/src/components/ErrorPanel.tsx",
+      "targetPath": "src/components/ErrorPanel.tsx",
+      "mode": "100644",
+      "contentSHA256": "sha256:c0c326f960b384250e4048b4bf122467c4046adf3a3de1d92894b78f8b2cd233"
+    }
+  ],
+  "slots": [],
+  "blocks": [
+    {
+      "sourcePath": "block-exports/react-ui.yaml",
+      "contentSHA256": "sha256:0982085c73bbc1d2459b81d30db8b8ac19d0ae56a7a557a33696eb75682f5ebe"
+    }
+  ]
+}

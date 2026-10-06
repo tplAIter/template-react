@@ -1,0 +1,37 @@
+{
+  "apiVersion": "tplaiter.dev/export-payload/v1",
+  "exportID": "react.data",
+  "files": [
+    {
+      "sourcePath": "react-files/src/data/api-client.ts",
+      "targetPath": "src/data/api-client.ts",
+      "mode": "100644",
+      "contentSHA256": "sha256:7517dec2fb1d2df4d3165bdceb106e626d6f37e4b724a522678d9b8478e4f76d"
+    },
+    {
+      "sourcePath": "react-files/src/data/api-error.ts",
+      "targetPath": "src/data/api-error.ts",
+      "mode": "100644",
+      "contentSHA256": "sha256:52bcaff820926e4176722376874509ca1597e58f7f9b5c7ba8f6b05f8edc71d0"
+    },
+    {
+      "sourcePath": "react-files/src/data/schema.ts",
+      "targetPath": "src/data/schema.ts",
+      "mode": "100644",
+      "contentSHA256": "sha256:9c6db942b8422d16c2c7939dccb815e4d8cf5ccbf305bbf9794b39884f4bd775"
+    },
+    {
+      "sourcePath": "react-files/src/hooks/useResource.ts",
+      "targetPath": "src/hooks/useResource.ts",
+      "mode": "100644",
+      "contentSHA256": "sha256:5e1309e0c2caae7fea696d1bcd554726d0442ee8fd8baddabe6b31f9a4b29b78"
+    }
+  ],
+  "slots": [],
+  "blocks": [
+    {
+      "sourcePath": "block-exports/react-data.yaml",
+      "contentSHA256": "sha256:7b8d4a513495a30076c59d65988a1de61794a04000829a2b78f18d7a6feb4dbf"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+import { useCallback } from 'react';
+import { useResource } from '../../hooks/useResource';
+import type { {{ .Name.Pascal }}API } from './api';
+export function use{{ .Name.Pascal }}(api: {{ .Name.Pascal }}API) {
+  const load = useCallback((signal: AbortSignal) => api.list(signal), [api]); return useResource(load);
+}

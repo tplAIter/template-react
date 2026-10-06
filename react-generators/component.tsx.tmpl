@@ -1,0 +1,5 @@
+import type { ReactNode } from 'react';
+export interface {{ .Name.Pascal }}Props { title: string; children?: ReactNode }
+export function {{ .Name.Pascal }}({ title, children }: {{ .Name.Pascal }}Props) {
+  return <section aria-label={title}><h2>{title}</h2>{children}</section>;
+}

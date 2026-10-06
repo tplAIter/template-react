@@ -1,0 +1,43 @@
+{
+  "apiVersion": "tplaiter.dev/export-payload/v1",
+  "exportID": "react.router",
+  "files": [
+    {
+      "sourcePath": "react-files/src/app/App.tsx",
+      "targetPath": "src/app/App.tsx",
+      "mode": "100644",
+      "contentSHA256": "sha256:c2f9c242a6b26cb22cc75a00b794d6600275279f7b62ec9451805870ae9af064"
+    },
+    {
+      "sourcePath": "react-files/src/app/routes.tsx",
+      "targetPath": "src/app/routes.tsx",
+      "mode": "100644",
+      "contentSHA256": "sha256:0d6f94b0029be47ca620ffdf2b5fbb32012122b594d873d43dd86868f3986f94"
+    },
+    {
+      "sourcePath": "react-files/src/app/router.tsx",
+      "targetPath": "src/app/router.tsx",
+      "mode": "100644",
+      "contentSHA256": "sha256:44f63023e5b490aecae5ddeb669e1d3ffcdbe1d1bac75eb9fcf1f5b7c320a8e0"
+    },
+    {
+      "sourcePath": "react-files/src/pages/HomePage.tsx",
+      "targetPath": "src/pages/HomePage.tsx",
+      "mode": "100644",
+      "contentSHA256": "sha256:d073db37c46aab9b66eaf3fbb44ed92ebb780178b058a450b7ea992cf6fa13d1"
+    },
+    {
+      "sourcePath": "react-files/src/pages/NotFoundPage.tsx",
+      "targetPath": "src/pages/NotFoundPage.tsx",
+      "mode": "100644",
+      "contentSHA256": "sha256:eda81f2376e39ca72213945aea7954325bff6972361b464f36dade365103cffa"
+    }
+  ],
+  "slots": [],
+  "blocks": [
+    {
+      "sourcePath": "block-exports/react-router.yaml",
+      "contentSHA256": "sha256:55f369ecbe989193857463deb1b5402582ce1057accfa64209641d0c457b0c4b"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+apiVersion: tplater.dev/block-export/v1
+kind: BlockExport
+metadata: {id: react.router, version: 0.1.0}
+compatibility: {tplater: ">=0.3.0 <0.4.0", markerSchema: tplater.dev/managed-block/v1}
+mergeStrategy: managed-blocks-v1
+formatter: {adapter: prettier, optionsDigest: sha256:44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a}
+targets:
+  - path: src/app/withNotFound.tsx
+    blocks:
+      - {id: react.router.fallback, provider: root, layout: layer_files, body: block-exports/bodies/react-router.tsx, order: 100}

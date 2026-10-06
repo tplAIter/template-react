@@ -1,0 +1,6 @@
+import { render, screen } from '@testing-library/react';
+import { it, expect } from 'vitest';
+import { {{ .Name.Pascal }}Page } from './{{ .Name.Pascal }}Page';
+it('renders the {{ .Name.Pascal }} heading', () => {
+  render(<{{ .Name.Pascal }}Page />); expect(screen.getByRole('heading', { name: '{{ .Name.Pascal }}' })).toBeTruthy();
+});

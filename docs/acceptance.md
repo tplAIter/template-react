@@ -1,0 +1,9 @@
+# Finite acceptance and qualification
+
+Source preparation: exact public base/preimages, preserved LICENSE/CODEOWNERS, reserved path inventory, native-v1 manifest digest, closed payload/block parsers and exact body hashes. Actual core renderer/preflight must cover all five kinds/two names, duplicate and normalized collisions, malformed names, missing anchor and unchanged fixture. Reaching execution-unavailable means no generator publication occurred.
+
+Package producer: separately reviewed OS gateway policy, genuine Bun1.4.2 lock-only resolution from the exact inert17-direct public seed, no artifact/private cache/credential/lifecycle inputs, transitive protocol/integrity/license audit and frozen offline lock check. Do not call source82 without the mandatory lock source83 complete.
+
+Package execution: after separate approved frozen artifact/native runtime closure, perform typecheck, build, tests and lint on unchanged producer package/lock. Tests cover malformed/oversized JSON, concrete CRUD verbs/bodies, failed server/transport, cancellation/stale result, form validation/focus/pending/retained text, loading/retry, accessible components and actual home/items/not-found routes. Materialize all five generators through actual core preparation/publication APIs once installed authority is ready, then compile/test those outputs. No handcrafted writer is a substitute.
+
+Installed acceptance: ordinary enrolled source and tool lifetimes, CLI/MCP new/gen/gen_batch --no-build ownership and rollback, complete generated files, public API synthetic transport and browser behavior. No Bun action grant, source authentication or model invocation can be inferred from package scripts/check labels. Backend/database/authenticated organization, future dependency and Next lifecycle are separate open tasks. Full P12 remains open until these actual checks are retained; absent prerequisites are real named blockers, never skipped PASS.
