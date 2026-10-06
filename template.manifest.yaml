@@ -3,7 +3,15 @@ kind: Template
 metadata:
   name: react-app
   version: 0.1.0-preview
-  description: TypeScript React Router application with cancellable typed data and accessible forms.
+  description: TypeScript React Router application with cancellable typed data, accessible forms and component generators.
+  labels:
+    tags: ["react", "typescript", "react-router", "web", "интерфейс", "компонент"]
+    lang: ["typescript"]
+    framework: ["react", "react-router"]
+    candidate-kind: ["template"]
+    readiness: ["unknown"]
+    keywords: ["react", "typescript", "router", "component", "page", "forms", "error", "интерфейс", "компонент", "страница", "форма", "ошибка"]
+    use-cases: ["Create a React application", "Add a typed component or route", "Diagnose React data and form errors", "Создать React приложение", "Добавить компонент или маршрут", "Исправить ошибку React формы"]
 engine:
   type: gotemplate
   root: react-files
