@@ -23,6 +23,13 @@ async function readBody(response: Response, signal: AbortSignal): Promise<string
     try { return new TextDecoder('utf-8', { fatal: true }).decode(bytes); } catch { throw new ApiError('invalid-response', 'The response is not valid UTF-8.'); }
   } finally { await reader.cancel().catch(() => undefined); reader.releaseLock(); }
 }
+function hasInvalidPathCharacter(value: string): boolean {
+  for (let index = 0; index < value.length; index += 1) {
+    const code = value.charCodeAt(index);
+    if (code <= 0x20 || code === 0x5c || code === 0x3f || code === 0x23) return true;
+  }
+  return false;
+}
 export class ApiClient {
   private readonly base: URL;
   constructor(baseURL: string, private readonly transport: Transport = fetch) {
@@ -31,7 +38,7 @@ export class ApiClient {
     if (!this.base.pathname.endsWith('/')) this.base.pathname += '/';
   }
   async request<T>(path: string, options: RequestOptions, decode: Decoder<T>): Promise<T> {
-    if (!path || path.startsWith('/') || /[\\?#\u0000-\u0020]/.test(path) || path.split('/').some(p => !p || p === '.' || p === '..' || /%2e|%2f|%5c/i.test(p))) throw new ApiError('invalid-request', 'API paths must be confined relative segments.');
+    if (!path || path.startsWith('/') || hasInvalidPathCharacter(path) || path.split('/').some(p => !p || p === '.' || p === '..' || /%2e|%2f|%5c/i.test(p))) throw new ApiError('invalid-request', 'API paths must be confined relative segments.');
     const url = new URL(path, this.base);
     if (url.origin !== this.base.origin || !url.pathname.startsWith(this.base.pathname)) throw new ApiError('invalid-request', 'The API path escaped its base.');
     if (options.signal.aborted) throw new ApiError('cancelled', 'Request cancelled.');

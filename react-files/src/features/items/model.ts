@@ -15,7 +15,14 @@ export function decodeItems(value: unknown): Item[] {
   if (new Set(items.map(item => item.id)).size !== items.length) throw new Error('Duplicate item identities.');
   return items;
 }
+function hasControlCharacter(value: string): boolean {
+  for (let index = 0; index < value.length; index += 1) {
+    const code = value.charCodeAt(index);
+    if (code <= 0x1f || code === 0x7f) return true;
+  }
+  return false;
+}
 export function titleError(title: string): string | undefined {
   if (!title.trim()) return 'Enter a title.';
-  if (title.trim().length > 120 || /[\u0000-\u001f\u007f]/.test(title)) return 'Use at most 120 printable characters.';
+  if (title.trim().length > 120 || hasControlCharacter(title)) return 'Use at most 120 printable characters.';
 }

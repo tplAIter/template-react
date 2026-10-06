@@ -6,7 +6,7 @@
       "sourcePath": "react-files/src/data/api-client.ts",
       "targetPath": "src/data/api-client.ts",
       "mode": "100644",
-      "contentSHA256": "sha256:7517dec2fb1d2df4d3165bdceb106e626d6f37e4b724a522678d9b8478e4f76d"
+      "contentSHA256": "sha256:e0c5b431aeb013a567578be66e3f63345ce4d1cc71c5b6b1f3b901c814e67667"
     },
     {
       "sourcePath": "react-files/src/data/api-error.ts",
@@ -18,7 +18,7 @@
       "sourcePath": "react-files/src/data/schema.ts",
       "targetPath": "src/data/schema.ts",
       "mode": "100644",
-      "contentSHA256": "sha256:9c6db942b8422d16c2c7939dccb815e4d8cf5ccbf305bbf9794b39884f4bd775"
+      "contentSHA256": "sha256:7c891ee43ab68e2b8a0050c2030f9dd362b5f288e9fd13b9bb731f3b4ab4e01b"
     },
     {
       "sourcePath": "react-files/src/hooks/useResource.ts",
