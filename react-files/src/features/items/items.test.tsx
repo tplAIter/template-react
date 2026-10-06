@@ -23,10 +23,28 @@ it('supports list, create, update and deletion using one injected API', async ()
   await screen.findByRole('checkbox', { name: sampleItem.title });
   fireEvent.change(screen.getByRole('textbox', { name: 'Item title' }), { target: { value: 'New item' } }); fireEvent.click(screen.getByRole('button', { name: 'Add item' }));
   await waitFor(() => expect(api.create).toHaveBeenCalledWith({ title: 'New item', completed: false }, expect.any(AbortSignal)));
-  await waitFor(() => expect((screen.getByRole('checkbox', { name: sampleItem.title }) as HTMLInputElement).disabled).toBe(false));
-  fireEvent.click(screen.getByRole('checkbox', { name: sampleItem.title })); await waitFor(() => expect(api.update).toHaveBeenCalledWith(sampleItem.id, { title: sampleItem.title, completed: true }, expect.any(AbortSignal)));
-  await waitFor(() => expect((screen.getByRole('button', { name: `Delete ${sampleItem.title}` }) as HTMLButtonElement).disabled).toBe(false));
-  fireEvent.click(screen.getByRole('button', { name: `Delete ${sampleItem.title}` })); await waitFor(() => expect(api.remove).toHaveBeenCalledWith(sampleItem.id, expect.any(AbortSignal)));
+  await waitFor(() => {
+    expect(api.list).toHaveBeenCalledTimes(2);
+    expect((screen.getByRole('checkbox', { name: sampleItem.title }) as HTMLInputElement).disabled).toBe(false);
+    expect((screen.getByRole('button', { name: `Delete ${sampleItem.title}` }) as HTMLButtonElement).disabled).toBe(false);
+  });
+  fireEvent.click(screen.getByRole('checkbox', { name: sampleItem.title }));
+  await waitFor(() => expect(api.update).toHaveBeenCalledWith(sampleItem.id, { title: sampleItem.title, completed: true }, expect.any(AbortSignal)));
+  let deleteClicked = false;
+  await waitFor(() => {
+    expect(api.list).toHaveBeenCalledTimes(3);
+    expect((screen.getByRole('checkbox', { name: sampleItem.title }) as HTMLInputElement).disabled).toBe(false);
+    const deleteButton = screen.getByRole('button', { name: `Delete ${sampleItem.title}` }) as HTMLButtonElement;
+    expect(deleteButton.disabled).toBe(false);
+    if (!deleteClicked) { deleteClicked = true; fireEvent.click(deleteButton); }
+  });
+  await waitFor(() => {
+    expect(api.remove).toHaveBeenCalledWith(sampleItem.id, expect.any(AbortSignal));
+    expect(api.remove).toHaveBeenCalledTimes(1);
+    expect(api.list).toHaveBeenCalledTimes(4);
+    expect((screen.getByRole('checkbox', { name: sampleItem.title }) as HTMLInputElement).disabled).toBe(false);
+    expect((screen.getByRole('button', { name: `Delete ${sampleItem.title}` }) as HTMLButtonElement).disabled).toBe(false);
+  });
 });
 it('shows loading/failure and retry instead of silent empty success', async () => {
   const api = testItemsAPI(); api.list = vi.fn(async () => { throw new ApiError('network', 'No backend.'); }); render(<ItemsPage api={api} />);
